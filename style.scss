@@ -13,9 +13,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         height: 100vh;
-        overflow: hidden;
+        overflow: auto;
         margin: 0;
     }
 }
