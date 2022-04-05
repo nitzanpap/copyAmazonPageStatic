@@ -38,6 +38,11 @@ body header {
   width: 100vw;
 }
 
+body header .header-nav-item {
+  border: 1px solid #232f3f;
+  border-radius: 2px;
+}
+
 body header .main-nav {
   height: 60px;
   display: -ms-grid;
@@ -51,6 +56,20 @@ body header .main-nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+body header .main-nav div {
+  border-color: #121921;
+  width: 150px;
+}
+
+body header .main-nav div:hover {
+  border-color: white;
+}
+
+body header .main-nav div img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 body header .categories-nav {
@@ -73,8 +92,6 @@ body header .categories-nav {
 
 body header .categories-nav li {
   padding: 2px 8px;
-  border: 1px solid #232f3f;
-  border-radius: 2px;
 }
 
 body header .categories-nav li:hover {

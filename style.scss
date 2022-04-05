@@ -32,6 +32,10 @@ body {
         color: white;
         width: 100vw;
         width: 100vw;
+        .header-nav-item {
+            border: 1px solid $nav-categories-bg-color;
+            border-radius: 2px;
+        }
         .main-nav {
             height: 60px;
             display: grid;
@@ -39,6 +43,17 @@ body {
             background-color: $nav-search-bg-color;
             align-items: center;
             justify-content: center;
+            div {
+                border-color: $nav-search-bg-color;
+                width: 150px;
+                &:hover {
+                    border-color: white;
+                }
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
         }
         .categories-nav {
             height: 30px;
@@ -49,8 +64,6 @@ body {
             justify-content: space-evenly;
             li {
                 padding: 2px 8px;
-                border: 1px solid $nav-categories-bg-color;
-                border-radius: 2px;
                 &:hover {
                     border-color: white;
                 }
