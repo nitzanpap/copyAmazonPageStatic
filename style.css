@@ -38,17 +38,16 @@ body header {
   width: 100vw;
 }
 
-body header .header-nav-item {
+body header .header-nav-items {
   border: 1px solid #232f3f;
   border-radius: 2px;
 }
 
 body header .main-nav {
   height: 60px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50px 75px 1fr 25px 75px 50px 50px;
-      grid-template-columns: 50px 75px 1fr 25px 75px 50px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #121921;
   -webkit-box-align: center;
       -ms-flex-align: center;
