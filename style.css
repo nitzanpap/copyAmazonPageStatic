@@ -9,10 +9,20 @@
 
 * a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 * ul {
   list-style-type: none;
+}
+
+* button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
 }
 
 body {
@@ -33,67 +43,126 @@ body {
 }
 
 body header {
+  font-size: 80%;
   color: white;
   width: 100vw;
   width: 100vw;
 }
 
-body header .header-nav-items {
-  border: 1px solid #232f3f;
+body header .header-item-hover {
+  border: 1px solid;
   border-radius: 2px;
+}
+
+body header .header-item-hover:hover {
+  border-color: white;
 }
 
 body header .main-nav {
   height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (150px)[2] 1fr 50px 150px (100px)[2];
+      grid-template-columns: repeat(2, 150px) 1fr 50px 150px repeat(2, 100px);
   background-color: #121921;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5px;
 }
 
-body header .main-nav div {
+body header .main-nav .main-nav-item {
   border-color: #121921;
   width: 150px;
+  padding: 5px 7px;
 }
 
-body header .main-nav div:hover {
+body header .main-nav .main-nav-item:hover {
   border-color: white;
 }
 
-body header .main-nav div img {
+body header .main-nav .main-nav-item img {
   max-width: 100%;
   max-height: 100%;
 }
 
+body header .main-nav .search-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 50px;
+      grid-template-columns: 100px 1fr 50px;
+  height: 70%;
+}
+
+body header .main-nav .search-container .search-btn {
+  background-color: #febd69;
+  border: 0;
+  border-radius: 0 6px 6px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .main-nav .search-container .search-btn img {
+  width: 50%;
+  height: 50%;
+}
+
+body header .main-nav .search-container .search-btn:hover {
+  background-color: #fbb252;
+}
+
+body header .main-nav .lang-logo {
+  width: 50px;
+}
+
+body header .main-nav .sign-in {
+  width: 150px;
+}
+
+body header .main-nav .orders {
+  width: 100px;
+}
+
+body header .main-nav .cart {
+  width: 100px;
+}
+
 body header .categories-nav {
-  height: 30px;
   background-color: #232f3f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding: 4px 8px;
 }
 
-body header .categories-nav li {
-  padding: 2px 8px;
+body header .categories-nav .categories-nav-item {
+  border: 1px solid #232f3f;
+  border-radius: 2px;
+  padding: 8px 8px;
 }
 
-body header .categories-nav li:hover {
+body header .categories-nav .categories-nav-item:hover {
   border-color: white;
 }
 /*# sourceMappingURL=style.css.map */

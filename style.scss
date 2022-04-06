@@ -6,9 +6,17 @@
 $nav-search-bg-color: #121921;
 $nav-categories-bg-color: #232f3f;
 $search-btn-bg-color: #febd69;
+$search-btn-hover-bg-color: #fbb252;
 // Buying section colors.
 $add-to-cart-btn-bg-color: #fed813;
 $buy-now-btn-bg-color: #ffa41d;
+
+// Sizes:
+
+// Navbar sizes.
+$x-small-nav-item-width: 50px;
+$small-nav-item-width: 100px;
+$medium-nav-item-width: 150px;
 
 * {
     box-sizing: border-box;
@@ -17,9 +25,18 @@ $buy-now-btn-bg-color: #ffa41d;
     font-family: "Roboto", sans-serif;
     a {
         text-decoration: none;
+        cursor: pointer;
     }
     ul {
         list-style-type: none;
+    }
+    button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        outline: inherit;
     }
 }
 body {
@@ -29,22 +46,33 @@ body {
     justify-content: flex-start;
     height: 100vh;
     header {
+        font-size: 80%;
         color: white;
         width: 100vw;
         width: 100vw;
-        .header-nav-items {
-            border: 1px solid $nav-categories-bg-color;
+        .header-item-hover {
+            border: 1px solid;
             border-radius: 2px;
+            &:hover {
+                border-color: white;
+            }
         }
         .main-nav {
             height: 60px;
-            display: flex;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: repeat(2, $medium-nav-item-width) 1fr $x-small-nav-item-width $medium-nav-item-width repeat(
+                    2,
+                    $small-nav-item-width
+                );
             background-color: $nav-search-bg-color;
             align-items: center;
-            justify-content: center;
-            div {
+            justify-content: space-between;
+            gap: 5px;
+            .main-nav-item {
                 border-color: $nav-search-bg-color;
                 width: 150px;
+                padding: 5px 7px;
                 &:hover {
                     border-color: white;
                 }
@@ -53,16 +81,50 @@ body {
                     max-height: 100%;
                 }
             }
+            .search-container {
+                display: grid;
+                grid-template-columns: $small-nav-item-width 1fr 50px;
+                height: 70%;
+                .search-btn {
+                    background-color: $search-btn-bg-color;
+                    border: 0;
+                    border-radius: 0 6px 6px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 50%;
+                        height: 50%;
+                    }
+                    &:hover {
+                        background-color: $search-btn-hover-bg-color;
+                    }
+                }
+            }
+            .lang-logo {
+                width: $x-small-nav-item-width;
+            }
+            .sign-in {
+                width: $medium-nav-item-width;
+            }
+            .orders {
+                width: $small-nav-item-width;
+            }
+            .cart {
+                width: $small-nav-item-width;
+            }
         }
         .categories-nav {
-            height: 30px;
             background-color: $nav-categories-bg-color;
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
             align-items: center;
             justify-content: space-evenly;
-            li {
-                padding: 2px 8px;
+            padding: 4px 8px;
+            .categories-nav-item {
+                border: 1px solid $nav-categories-bg-color;
+                border-radius: 2px;
+                padding: 8px 8px;
                 &:hover {
                     border-color: white;
                 }
