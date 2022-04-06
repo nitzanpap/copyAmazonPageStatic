@@ -122,13 +122,31 @@ body {
             justify-content: space-evenly;
             padding: 4px 8px;
             .categories-nav-item {
-                border: 1px solid $nav-categories-bg-color;
-                border-radius: 2px;
                 padding: 8px 8px;
+                border: 1px solid $nav-categories-bg-color;
                 &:hover {
                     border-color: white;
                 }
             }
         }
+    }
+    .sub-categories-nav {
+        width: 100vw;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 8px;
+        color: #333333;
+        font-size: 75%;
+        text-underline-offset: 0.2em;
+        .sub-categories-nav-item {
+            border: none;
+            &:hover {
+                text-decoration: 2px solid underline $buy-now-btn-bg-color;
+            }
+        }
+    }
+    main {
     }
 }
