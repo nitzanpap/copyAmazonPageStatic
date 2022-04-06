@@ -136,12 +136,13 @@ body {
         flex-flow: row wrap;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 8px;
         color: #333333;
         font-size: 75%;
         text-underline-offset: 0.2em;
+        border-bottom: 1px solid #e5e5e5;
         .sub-categories-nav-item {
             border: none;
+            padding: 20px 20px;
             &:hover {
                 text-decoration: 2px solid underline $buy-now-btn-bg-color;
             }

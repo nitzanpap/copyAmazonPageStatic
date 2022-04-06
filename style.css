@@ -180,14 +180,15 @@ body .sub-categories-nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 8px;
   color: #333333;
   font-size: 75%;
   text-underline-offset: 0.2em;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 body .sub-categories-nav .sub-categories-nav-item {
   border: none;
+  padding: 20px 20px;
 }
 
 body .sub-categories-nav .sub-categories-nav-item:hover {
